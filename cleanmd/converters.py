@@ -5,7 +5,11 @@
 
 from __future__ import annotations
 
+import logging
 from pathlib import Path
+
+# pdfminer 在解析问题字体时会刷屏 "Could not get FontBBox …" 警告，直接压到 ERROR
+logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 _PASSTHROUGH = {".md", ".markdown", ".txt", ".text"}
 

@@ -82,6 +82,7 @@ def test_convert_missing_file():
 def test_all_rules_pluggable():
     # 每条注册的规则都可被单独关闭
     assert set(cleaners.RULE_NAMES) == {
-        "strip_headers_footers", "filter_html_noise", "fix_tables",
-        "restore_headings", "normalize_whitespace", "detect_empty_extraction",
+        "normalize_unicode", "strip_headers_footers", "filter_html_noise",
+        "fix_tables", "restore_headings", "normalize_whitespace",
+        "detect_empty_extraction",
     }
